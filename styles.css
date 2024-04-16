@@ -151,3 +151,75 @@ nav a {
     }
 }
 
+@media (max-width: 1024px) {
+    header {
+        position: static;  /* Make the header flow with the document on smaller screens */
+        width: 100%;       /* Full width */
+        padding: 10px 0;   /* Reduced padding */
+        text-align: center;
+        margin-top: 0;     /* Remove margin-top */
+        border-radius: 0;  /* No border-radius for a cleaner look at the top */
+    }
+
+    .bod {
+        width: 100%;      /* Full width */
+        margin-left: 0;   /* Align to the edge */
+        padding: 10px 0;  /* Add padding for spacing */
+    }
+
+    nav a {
+        padding: 10px;    /* Larger tap area */
+    }
+
+    .button {
+        width: auto;      /* Allow buttons to fit content */
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: stretch;   /* Stretch to fill the width */
+    }
+
+    img {
+        width: 120px;  /* Slightly smaller image */
+        margin: 0 auto; /* Center image */
+    }
+
+    .contact, .education, .info {
+        padding: 15px; /* Adequate padding */
+        width: 90%;    /* Slightly less width for some margin */
+        margin: 10px auto; /* Center sections */
+    }
+
+    .contact input[type="text"],
+    .contact input[type="email"],
+    .contact input[type="number"],
+    .contact textarea {
+        padding: 12px; /* Larger padding for easier interaction */
+    }
+
+    .contact button {
+        padding: 12px 20px; /* Larger button for easier tapping */
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 14px; /* Adjust base font size for small devices */
+    }
+
+    section, footer {
+        width: 100%; /* Full width to use space efficiently */
+        margin: 5px 0; /* Smaller margins */
+    }
+
+    header, .bod {
+        padding: 5px 0; /* Less padding in the header and bod */
+    }
+
+    .button, nav a {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+}
