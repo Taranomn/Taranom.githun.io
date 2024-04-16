@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personal Website</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="myphoto.jpg" alt="Your image">
+        <h1>Taranom Noori</h1>
+        <nav>
+            <a href="your-resume.pdf" class="button" download="YourName_Resume">Resume</a>
+            <a href="#contact" class="button">Contact Me</a>
+        </nav>
+        <section class="info">
+            <h2>About Me</h2>
+            <p>Name: Taranom noori</p>
+            <p>Date: <script>document.write(new Date().toLocaleDateString());</script></p>
+            <p>Course: WEB222</p>
+            <p>Section: ZCC</p>
+            <p>Professor: Mark Anthony</p>
+            <p>I declare that my assessment is wholly my own work in accordance with Seneca Academic Policy.</p>
+        </section>
+    </header>
+
+    <div class="bod">
+        
+    
+        <section class="education">
+            <h2>Education</h2>
+            <p>Seneca - CPP(Computer Programming)</p>
+            <p>2025</p>
+            <p>Embarking on a journey in Computer Programming at Seneca College has been a transformative experience that has not only honed my technical skills but also sharpened my problem-solving abilities. As a student in the Computer Programming and Analysis (CPA) program, I have been immersed in a diverse curriculum that covers a wide range of topics, from fundamental programming languages like Java, Python, and C++, to advanced subjects such as web development, database management, and software design patterns.</p>
+
+            <p>Throughout my studies, I have engaged in practical, hands-on projects that simulate real-world challenges, enabling me to apply theoretical knowledge in meaningful ways. These projects have included developing dynamic websites, creating robust software applications, and designing databases for efficient data retrieval and storage. Each project has helped solidify my coding skills while also teaching me the importance of clean, maintainable code and effective collaboration in team settings.</p>
+                
+            <p>In addition to technical skills, my education has emphasized critical soft skills, including communication, teamwork, and time management. These skills have been crucial in my personal and professional development, allowing me to effectively articulate complex ideas and collaborate with peers on various projects.</p>
+                
+                <p>As I approach the completion of my degree in 2025, I am eager to bring my technical acumen, problem-solving capabilities, and a continuous desire to learn to the forefront of the technology industry. My goal is to contribute to innovative software solutions that are not only effective but also user-friendly and accessible to a broad audience.</p>
+                
+                <p>By integrating both technical prowess and a strong ethical foundation, my education in Computer Programming has prepared me for a successful career in technology, where I aspire to make a significant impact by developing software that enhances everyday life and drives progress in the digital world.
+                
+                </p>
+        </section>
+    
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <form action="https://httpbin.org/post" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+    
+                <label for="city">City:</label>
+                <input list="cities" id="city" name="city" required>
+                <datalist id="cities">
+                    <option value="Toronto">
+                    <option value="Vancouver">
+                    <option value="Montreal">
+                    <option value="Calgary">
+                </datalist>
+    
+                <label for="postal">Postal Code:</label>
+                <input type="text" id="postal" name="postal" pattern="[A-Za-z][0-9][A-Za-z][ -]?[0-9][A-Za-z][0-9]" title="Please enter a valid Canadian Postal Code" required>
+    
+                <fieldset>
+                    <legend>Reason for Contact:</legend>
+                    <label><input type="radio" name="reason" value="Question" onclick="hideRate()"> Question</label>
+                    <label><input type="radio" name="reason" value="Comment" onclick="hideRate()"> Comment</label>
+                    <label><input type="radio" name="reason" value="Hiring" onclick="showRate()"> Hiring</label>
+                </fieldset>
+    
+                <div id="rate" class="hidden">
+                    <label for="hourly">Hourly Rate:</label>
+                    <input type="number" id="hourly" name="hourly">
+                </div>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+    
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <footer>
+            <p>Thank you for visiting my site!</p>
+        </footer>
+    </div>
+    
+    
+</body>
+</html>
